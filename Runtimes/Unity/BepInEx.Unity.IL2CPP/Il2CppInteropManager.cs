@@ -283,6 +283,10 @@ internal static partial class Il2CppInteropManager
         AppDomain.CurrentDomain.AssemblyResolve += ResolveInteropAssemblies;
 
         GenerateInteropAssemblies();
+    }
+
+    public static void StartRuntime()
+    {
         var interopLogger = LoggerFactory.CreateLogger("Il2CppInterop");
 
         var unityVersion = UnityInfo.Version;
